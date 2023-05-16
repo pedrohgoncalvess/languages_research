@@ -1,16 +1,15 @@
 package github
 
 import database.Repositories
-import database.operations.insertRepositorie
+import database.operations.{insertRepositorie, maxIDRepositorie}
 
 import scala.collection.mutable.ArrayBuffer
 import java.time.LocalDateTime
-import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 object github_requests extends App {
-  getUrlRepositories(since=1928)
   //getTeste
+  getUrlRepositories(since=maxIDRepositorie.getOrElse(None).toString)
 
   def getTeste: Unit = {
 
@@ -23,7 +22,7 @@ object github_requests extends App {
     println(jsonInfo.foreach(println)) //LANGUAGES -> NUM LINES
   }
 
-  def getUrlRepositories(since:Int = 0):Unit = {
+  def getUrlRepositories(since:String = "0"):Unit = {
 
     val requestVals = RequestParams()
 
@@ -63,9 +62,8 @@ object github_requests extends App {
       idRepository.toString.toInt
     })
     Thread.sleep(2000)
-    getUrlRepositories(repositoriesInfos.max)
+    getUrlRepositories(repositoriesInfos.max.toString)
   }
-
 
     def getLanguageRepo(owner: String, name_repo:String): Unit = {
       val requestVals = RequestParams()
@@ -77,19 +75,5 @@ object github_requests extends App {
       println(languages.getClass)
       println(languages)
       languages.foreach(println)
-
-
-//        val jsonLang = ujson.read(responseLang.text())
-//        jsonLang match {
-//          case obj: ujson.Obj =>
-//            val languageMap = obj.value
-//
-//            languageMap.foreach { case (language, _) =>
-//              println(s"Repo id:${repoInfo.get("id").getOrElse(None)} \nLanguage: $language")
-//            }
-//
-//          case _ =>
-//            println("O JSON não é um objeto.")
-//        }
     }
   }

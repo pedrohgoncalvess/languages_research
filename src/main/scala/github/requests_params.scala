@@ -2,7 +2,7 @@ package github
 
 case class RequestParams() {
 
-  val token = "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"
+  val token = "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"
 
   val headers = Map(
     "Accept" -> "application/vnd.github+json",
@@ -11,7 +11,7 @@ case class RequestParams() {
   )
 
 
-  def urlRepositories(since: Int = 0): String = {
+  def urlRepositories(since: String = "0"): String = {
     s"https://api.github.com/repositories?since=$since"
   }
 
