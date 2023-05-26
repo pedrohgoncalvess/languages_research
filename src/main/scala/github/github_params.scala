@@ -1,8 +1,14 @@
 package github
+import com.typesafe.config.ConfigFactory
+
+
+
 
 case class RequestParams() {
 
-  val token = "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"
+  private val config = ConfigFactory.load()
+
+  val token = config.getString("GIT_TOKEN")
 
   val headers = Map(
     "Accept" -> "application/vnd.github+json",
