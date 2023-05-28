@@ -25,5 +25,6 @@ case class Questions(
 
 case class QuestionsTags(
                         id_question:Int,
+                        id_compost:String,
                         tag_question:String
                         )

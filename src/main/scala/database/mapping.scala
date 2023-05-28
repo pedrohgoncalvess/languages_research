@@ -1,5 +1,4 @@
 package database
-import database._
 
 object Tables {
 
@@ -53,9 +52,11 @@ object Tables {
   class QuestionsTagsTable(tag: Tag) extends Table[QuestionsTags](tag, Some("stackoverflow"), "questions_tags") {
     def id_question = column[Int]("id_question")
 
-    def tag_question = column[String]("tag")
+    def id_compost = column[String]("id_compost")
 
-    override def * = (id_question, tag_question) <> (QuestionsTags.tupled, QuestionsTags.unapply)
+    def tag_question = column[String]("tag_question")
+
+    override def * = (id_question, id_compost, tag_question) <> (QuestionsTags.tupled, QuestionsTags.unapply)
   }
 
   lazy val questionsTagTable = TableQuery[QuestionsTagsTable]
