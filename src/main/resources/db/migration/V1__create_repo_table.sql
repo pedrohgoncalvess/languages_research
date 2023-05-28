@@ -8,5 +8,6 @@ create table github.repositories (
     created_at date,
     stars int,
     forks int,
-    primary key (id, id_repo)
+    inserted_at datetime default current_timestamp,
+        primary key (id, id_repo)
 );

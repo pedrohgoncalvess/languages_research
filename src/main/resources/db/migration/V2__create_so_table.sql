@@ -17,10 +17,11 @@ create table stackoverflow.questions (
 
 create table stackoverflow.questions_tags (
     id int auto_increment,
+    id_compost varchar(40) unique,
     id_question int,
     tag_question varchar(25),
 
-    primary key (id),
+    primary key (id, id_compost),
     foreign key (id_question)
         references stackoverflow.questions(id_question)
               on delete cascade
