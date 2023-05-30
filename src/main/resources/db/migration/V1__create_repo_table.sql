@@ -1,6 +1,6 @@
-create schema github;
+create schema if not exists github;
 
-create table github.repositories (
+create table if not exists github.repositories (
     id int auto_increment,
     id_repo int not null unique,
     owner varchar(30),

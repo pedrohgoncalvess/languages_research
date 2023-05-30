@@ -1,6 +1,6 @@
-create schema stackoverflow;
+create schema if not exists stackoverflow;
 
-create table stackoverflow.questions (
+create table if not exists stackoverflow.questions (
     id int auto_increment,
     id_question int unique,
     title varchar(175),
@@ -15,7 +15,7 @@ create table stackoverflow.questions (
         primary key (id,id_question)
 );
 
-create table stackoverflow.questions_tags (
+create table if not exists stackoverflow.questions_tags (
     id int auto_increment,
     id_compost varchar(40) unique,
     id_question int,
@@ -26,3 +26,12 @@ create table stackoverflow.questions_tags (
         references stackoverflow.questions(id_question)
               on delete cascade
 );
+
+create table if not exists stackoverflow.pagination  (
+    id int auto_increment,
+    id_compost varchar(40) unique,
+    searched_tag varchar(20),
+    searched_page int,
+    searched_at datetime default current_timestamp,
+        primary key (id,id_compost)
+)
