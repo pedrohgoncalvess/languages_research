@@ -1,31 +1,27 @@
-package database
+package database.stackoverflow_schema
 
-object Tables {
+import java.time.LocalDate
+
+case class Questions(
+                      id_question:Int,
+                      title:String,
+                      view_count:Int,
+                      answer_count:Int,
+                      score:Int,
+                      is_answered:Boolean,
+                      creation_date:LocalDate,
+                      last_activity:LocalDate
+                    )
+
+case class QuestionsTags(
+                          id_question:Int,
+                          id_compost:String,
+                          tag_question:String
+                        )
+
+object stackoverflowTables {
 
   import slick.jdbc.MySQLProfile.api._
-  import java.time.LocalDate
-
-  class RepositoriesTable(tag: Tag) extends Table[Repositories](tag, Some("github"), "repositories") {
-    def id = column[Long]("id", O.AutoInc, O.PrimaryKey)
-
-    def id_repo = column[Long]("id_repo")
-
-    def owner = column[String]("owner")
-
-    def name_repo = column[String]("name_repo")
-
-    def created_at = column[LocalDate]("created_at")
-
-    def stars = column[Int]("stars")
-
-    def forks = column[Int]("forks")
-
-    override def * = (id, id_repo, owner, name_repo, created_at, stars, forks) <> (Repositories.tupled, Repositories.unapply)
-
-  }
-
-  lazy val repositoriesTable = TableQuery[RepositoriesTable]
-
 
   class QuestionsTable(tag: Tag) extends Table[Questions](tag, Some("stackoverflow"), "questions") {
     def id_question = column[Int]("id_question", O.Unique, O.PrimaryKey)

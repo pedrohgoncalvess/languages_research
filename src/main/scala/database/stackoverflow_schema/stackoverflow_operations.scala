@@ -1,7 +1,6 @@
-package database
+package database.stackoverflow_schema
 
 import java.util.concurrent.Executors
-import scala.concurrent.duration.DurationInt
 import scala.concurrent.{Await, ExecutionContext, Future}
 
 object PrivateExecutionContext {
@@ -9,34 +8,18 @@ object PrivateExecutionContext {
   implicit val ec: ExecutionContext = ExecutionContext.fromExecutorService(executor)
 }
 
-object operations {
+object stackoverflowOperations {
 
   import slick.jdbc.MySQLProfile.api._
   import PrivateExecutionContext._
-
-  def insertRepositorie(repositorie: Repositories, numTries: Int = 3): Future[Unit] = {
-
-    val insertRepo = Tables.repositoriesTable += repositorie
-    val futureId: Future[Int] = connection.db.run(insertRepo)
-    futureId.flatMap { repo =>
-      println(s"New repo has been added.")
-      Future.successful(())
-    }.recoverWith {
-      case ex: Throwable if numTries > 1 =>
-        println(s"Query failed, reason: $ex")
-        insertRepositorie(repositorie, numTries - 1)
-      case ex: Throwable =>
-        println(s"Query failed after $numTries tries, reason: $ex")
-        Future.failed(ex)
-    }
-  }
+  import database.connection
 
   def insertQuestion(quest: Questions, numTries: Int = 3): Future[Unit] = {
 
-    val insertQuest = Tables.questionsTable += quest
+    val insertQuest = stackoverflowTables.questionsTable += quest
     val futureId: Future[Int] = connection.db.run(insertQuest)
     futureId.flatMap { q =>
-      println(s"New repo has been added.")
+      println(s"New question has been added.")
       Future.successful(())
     }.recoverWith {
       case ex: Throwable if numTries > 1 =>
@@ -50,10 +33,10 @@ object operations {
 
   def insertTagQuestion(tagQuest: QuestionsTags, numTries: Int = 3): Future[Unit] = {
 
-    val insertTag = Tables.questionsTagTable += tagQuest
+    val insertTag = stackoverflowTables.questionsTagTable += tagQuest
     val futureId: Future[Int] = connection.db.run(insertTag)
     futureId.flatMap { q =>
-      println(s"New repo has been added.")
+      println(s"New tag has been added.")
       Future.successful(())
     }.recoverWith {
       case ex: Throwable if numTries > 1 =>
@@ -63,15 +46,5 @@ object operations {
         println(s"Query failed after $numTries tries, reason: $ex")
         Future.failed(ex)
     }
-  }
-
-  def maxIDRepositorie: Option[Long] = {
-    val table = Tables.repositoriesTable.map(_.id_repo)
-    val max = table.max
-
-    val result = connection.db.run(max.result)
-    Await.result(result, 5.seconds)
-
-    result.value.get.get
   }
 }
