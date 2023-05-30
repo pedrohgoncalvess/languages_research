@@ -32,6 +32,40 @@ object githubOperations {
     }
   }
 
+  def insertTag(tag_name: TagsRepositories, numTries: Int = 3): Future[Unit] = {
+
+    val insertNewTag = githubTables.tagsTable += tag_name
+    val futureId: Future[Int] = connection.db.run(insertNewTag)
+    futureId.flatMap { _ =>
+      println(s"New tag has been added.")
+      Future.successful(())
+    }.recoverWith {
+      case ex: Throwable if numTries > 1 =>
+        println(s"Query failed, reason: $ex")
+        insertTag(tag_name, numTries - 1)
+      case ex: Throwable =>
+        println(s"Query failed after $numTries tries, reason: $ex")
+        Future.failed(ex)
+    }
+  }
+
+  def insertLanguage(language: LanguagesRepositories, numTries: Int = 3): Future[Unit] = {
+
+    val insertNewLanguage = githubTables.languagesTable += language
+    val futureId: Future[Int] = connection.db.run(insertNewLanguage)
+    futureId.flatMap { _ =>
+      println(s"New language has been added.")
+      Future.successful(())
+    }.recoverWith {
+      case ex: Throwable if numTries > 1 =>
+        println(s"Query failed, reason: $ex")
+        insertLanguage(language, numTries - 1)
+      case ex: Throwable =>
+        println(s"Query failed after $numTries tries, reason: $ex")
+        Future.failed(ex)
+    }
+  }
+
   def maxIDRepositorie: Option[Long] = {
     val table = githubTables.repositoriesTable.map(_.id_repo)
     val max = table.max
