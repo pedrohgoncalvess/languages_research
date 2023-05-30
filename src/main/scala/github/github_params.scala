@@ -28,4 +28,8 @@ case class RequestParams() {
   def urlInformation(owner: String, repo_name:String): String = {
     s"https://api.github.com/repos/$owner/$repo_name"
   }
+
+  def rateLimit: String = {
+    "https://api.github.com/rate_limit"
+  }
 }

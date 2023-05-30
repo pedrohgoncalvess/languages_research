@@ -1,7 +1,7 @@
 package github
 
-import database.Repositories
-import database.operations.{insertRepositorie, maxIDRepositorie}
+import database.github_schema.githubOperations._
+import database.github_schema._
 
 import scala.collection.mutable.ArrayBuffer
 import java.time.LocalDateTime
@@ -10,6 +10,15 @@ import java.time.format.DateTimeFormatter
 object github_requests extends App {
   //getTeste
   getUrlRepositories(since=maxIDRepositorie.getOrElse(None).toString)
+  //getLimitRate
+
+  def getLimitRate: Unit = {
+
+    val requestVals = RequestParams()
+
+    val repo = requests.get(requestVals.rateLimit, headers = requestVals.headers)
+    println(repo.text())
+  }
 
   def getTeste: Unit = {
 
@@ -58,10 +67,10 @@ object github_requests extends App {
         case e: Throwable => println(s"Cannot access repo. Reason: $e")
       }
 
-        Thread.sleep(1500)
+        Thread.sleep(500) //sleep between infos of repos
       idRepository.toString.toInt
     })
-    Thread.sleep(2000)
+    Thread.sleep(1000) //sleep between list of repos
     getUrlRepositories(repositoriesInfos.max.toString)
   }
 
