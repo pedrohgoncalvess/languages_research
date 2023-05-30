@@ -1,0 +1,240 @@
+programming_language;name;type
+Python;Airflow;Framework
+Python;Flask;Framework
+Python;Django;Framework
+Python;TensorFlow;Library
+Python;PyTorch;Library
+Python;Pandas;Library
+Python;NumPy;Library
+Python;SciPy;Library
+Python;Scikit-learn;Library
+Python;SQLAlchemy;Library
+Python;BeautifulSoup;Library
+Python;Celery;Library
+Python;Gevent;Library
+Python;Gunicorn;Library
+Python;Twisted;Library
+Python;Pygame;Library
+Python;PyQt;Library
+Python;wxPython;Library
+Python;Cython;Library
+Python;PyGTK;Library
+Python;Tkinter;Library
+Java;Spring Framework;Framework
+Java;Apache Struts;Framework
+Java;Hibernate;Library
+Java;JUnit;Library
+Java;Apache Kafka;Library
+Java;JavaFX;Library
+Java;Guava;Library
+Java;GWT (Google Web Toolkit);Library
+Java;Vert.x;Library
+Java;Play Framework;Framework
+Java;Apache Wicket;Framework
+Java;Apache Camel;Framework
+C++;Qt;Framework
+C++;Boost;Library
+C++;OpenCV;Library
+C++;STL (Standard Template Library);Library
+C++;POCO (POrtable COmponents);Library
+C++;OpenMP;Library
+C++;VTK (Visualization Toolkit);Library
+C++;Eigen;Library
+C++;FLTK (Fast Light Toolkit);Library
+C++;GTK+;Library
+C++;SFML (Simple and Fast Multimedia Library);Library
+C#;ASP.NET;Framework
+C#;Entity Framework;Library
+C#;WPF (Windows Presentation Foundation);Framework
+C#;Xamarin;Framework
+C#;NUnit;Library
+C#;Unity;Framework
+C#;Dapper;Library
+C#;MahApps.Metro;Library
+C#;Prism;Framework
+C#;XUnit;Library
+JavaScript;React;Library
+JavaScript;AngularJS;Framework
+JavaScript;Vue.js;Library
+JavaScript;Node.js;Framework
+JavaScript;Express.js;Framework
+JavaScript;jQuery;Library
+JavaScript;D3.js;Library
+JavaScript;TypeScript;Language
+JavaScript;Ember.js;Framework
+JavaScript;Meteor.js;Framework
+JavaScript;Backbone.js;Library
+JavaScript;Chart.js;Library
+Ruby;Ruby on Rails;Framework
+Ruby;Sinatra;Framework
+Ruby;Hanami;Framework
+Ruby;Roda;Framework
+Ruby;Capistrano;Library
+Ruby;Sidekiq;Library
+Ruby;Grape;Library
+Ruby;Puma;Library
+Ruby;Rack;Library
+Ruby;Celery;Library
+Ruby;Cucumber;Library
+Ruby;RSpec;Library
+Rust;Rocket;Framework
+Rust;Actix;Framework
+Rust;Tokio;Library
+Rust;Diesel;Library
+Rust;Serde;Library
+Rust;Yew;Framework
+Rust;Hyper;Library
+Rust;Rusoto;Library
+Rust;Amethyst;Framework
+Rust;async-std;Library
+Go;Gin;Framework
+Go;Echo;Framework
+Go;Beego;Framework
+Go;Gorm;Library
+Go;Revel;Framework
+Go;Colly;Library
+Go;Fiber;Framework
+Go;Gorilla;Library
+Go;Martini;Framework
+Go;Pop;Library
+Swift;UIKit;Framework
+Swift;SpriteKit;Framework
+Swift;Alamofire;Library
+Swift;Realm;Library
+Swift;Combine;Library
+Swift;SwiftyJSON;Library
+Swift;PromiseKit;Library
+Swift;Quick;Library
+Swift;Nimble;Library
+Kotlin;Ktor;Framework
+Kotlin;Spring Boot;Framework
+Kotlin;Exposed;Library
+Kotlin;Fuel;Library
+Kotlin;Anko;Library
+Kotlin;Spek;Library
+Kotlin;MockK;Library
+Scala;Play Framework;Framework
+Scala;Akka;Framework
+Scala;Slick;Library
+Scala;Spark;Framework
+Scala;Cats;Library
+Scala;Scalaz;Library
+Scala;Circe;Library
+Scala;Finch;Library
+Scala;Spray;Framework
+Scala;Shapeless;Library
+Perl;Mojolicious;Framework
+Perl;Dancer;Framework
+Perl;Catalyst;Framework
+Perl;Moose;Library
+Perl;Plack;Library
+Perl;DBIx::Class;Library
+Perl;Test::More;Library
+Perl;Template Toolkit;Library
+Perl;WWW::Mechanize;Library
+Cython;Cython;Framework
+Cython;NumPy;Library
+Cython;SciPy;Library
+Cython;Pandas;Library
+Cython;scikit-learn;Library
+PHP;Laravel;Framework
+PHP;Symfony;Framework
+PHP;CodeIgniter;Framework
+PHP;CakePHP;Framework
+PHP;Doctrine;Library
+PHP;PHPUnit;Library
+PHP;Composer;Library
+PHP;Phalcon;Framework
+PHP;Swoole;Library
+Lua;LuaSocket;Library
+Lua;LuaSQL;Library
+Lua;LuaFileSystem;Library
+Lua;Lua-cURL;Library
+Lua;CGILua;Library
+Lua;LuaRocks;Library
+Lua;Orbit;Library
+Lua;LPeg;Library
+Lua;Inspect;Library
+Python;Tornado;Framework
+Python;Bottle;Framework
+Python;CherryPy;Framework
+Python;Pyramid;Framework
+Python;Web2Py;Framework
+Python;Falcon;Framework
+Python;Pyro;Framework
+Python;Nameko;Framework
+Python;Hug;Framework
+Python;Quart;Framework
+Python;Responder;Framework
+Python;PyJS;Framework
+Python;Pywebview;Framework
+Python;TensorFlow.js;Library
+Python;Keras;Library
+Python;Pillow;Library
+Python;PyQtGraph;Library
+Java;Struts;Framework
+Java;JSF (JavaServer Faces);Framework
+Java;Spring Boot;Framework
+Java;Grails;Framework
+Java;Groovy;Language
+Java;JSP (JavaServer Pages);Framework
+Java;JDBC (Java Database Connectivity);Library
+C++;wxWidgets;Framework
+C++;CMake;Framework
+C++;FLANN;Library
+C++;CPPUnit;Library
+C++;Bullet;Library
+C#;Windows Forms;Framework
+C#;ASP.NET Core;Framework
+C#;WCF (Windows Communication Foundation);Framework
+JavaScript;Next.js;Framework
+JavaScript;Gatsby;Framework
+JavaScript;Svelte;Framework
+JavaScript;Three.js;Library
+Ruby;Motion;Framework
+Ruby;Hobbit;Framework
+Ruby;Campfire;Framework
+Ruby;Sequel;Library
+Ruby;Minitest;Library
+Rust;Tide;Framework
+Rust;Reqwest;Library
+Rust;Actix-Web;Framework
+Rust;SQLx;Library
+Go;Iris;Framework
+Go;Cobra;Library
+Swift;Kitura;Framework
+Swift;Vapor;Framework
+Swift;Perfect;Framework
+Scala;Lift;Framework
+Scala;Finatra;Framework
+Scala;ScalaTest;Library
+Lua;Lapis;Framework
+Groovy;Grails;Framework
+Groovy;Ratpack;Framework
+TypeScript;NestJS;Framework
+TypeScript;Prisma;Library
+Haskell;Yesod;Framework
+Haskell;HUnit;Library
+Clojure;Luminus;Framework
+Clojure;Compojure;Framework
+R;Shiny;Framework
+R;Tidyverse;Library
+C;GTK+;Library
+C;libcurl;Library
+C;FFmpeg;Library
+Cobol;GnuCOBOL;Language
+Cobol;OpenCobolIDE;Framework
+Assembly;NASM;Language
+Assembly;Keil;Framework
+Fortran;OpenBLAS;Library
+Fortran;FFTW;Library
+HTML;Bootstrap;Framework
+HTML;Foundation;Framework
+HTML;Bulma;Framework
+HTML;Semantic UI;Framework
+HTML;Pure.css;Framework
+CSS;Sass;Library
+CSS;Less;Library
+CSS;Tailwind CSS;Framework
+CSS;Materialize CSS;Framework
+CSS;UIKit;Framework

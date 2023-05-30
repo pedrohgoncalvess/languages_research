@@ -1,0 +1,173 @@
+name;type
+Linux;operating_system
+Windows;operating_system
+macOS;operating_system
+Ubuntu;operating_system
+CentOS;operating_system
+Red Hat Enterprise Linux;operating_system
+Fedora;operating_system
+Debian;operating_system
+Arch Linux;operating_system
+CoreOS;operating_system
+MySQL;SQL
+Oracle Database;SQL
+Microsoft SQL Server;SQL
+PostgreSQL;SQL
+IBM Db2;SQL
+SQLite;SQL
+Amazon Aurora;SQL
+Google Cloud Spanner;SQL
+SAP HANA;SQL
+Teradata;SQL
+MongoDB;NoSQL
+Cassandra;NoSQL
+Couchbase;NoSQL
+Redis;Cache
+Memcached;Cache
+Elasticsearch;NoSQL/Search
+Amazon DynamoDB;NoSQL
+Azure Cosmos DB;NoSQL
+Riak;NoSQL
+Neo4j;Graph
+ArangoDB;Multi-model
+CockroachDB;Distributed SQL
+InfluxDB;Time Series
+Firebase Realtime Database;NoSQL
+Hadoop/HDFS;Distributed/File System
+Apache Hive;Data Warehouse
+Apache Cassandra;NoSQL
+Apache Kafka;Stream Processing
+Apache HBase;NoSQL
+Apache CouchDB;NoSQL
+Microsoft Access;Desktop DBMS
+IBM Informix;SQL
+Vertica;Columnar
+MariaDB;SQL
+SQLite;SQL
+Sybase ASE;SQL
+Snowflake;Cloud Data Warehouse
+Amazon Redshift;Cloud Data Warehouse
+Google BigQuery;Cloud Data Warehouse
+Microsoft Azure SQL Database;Cloud SQL
+Amazon RDS;Cloud SQL
+Google Cloud SQL;Cloud SQL
+IBM Db2 on Cloud;Cloud SQL
+Oracle Autonomous Database;Cloud SQL
+MongoDB Atlas;Cloud NoSQL
+Microsoft Azure Cosmos DB;Cloud NoSQL
+Google Cloud Firestore;Cloud NoSQL
+Amazon DocumentDB;Cloud NoSQL
+Google Cloud Datastore;Cloud NoSQL
+Amazon ElastiCache;Cloud Cache
+Google Cloud Memorystore;Cloud Cache
+Microsoft Azure Cache for Redis;Cloud Cache
+IBM Cloudant;Cloud NoSQL
+Microsoft Azure Synapse Analytics;Cloud Data Warehouse
+IBM Db2 Warehouse;Cloud Data Warehouse
+Apache Druid;Columnar
+Apache Derby;SQL
+Apache Ignite;In-Memory Data Fabric
+Percona Server for MySQL;SQL
+MemSQL;In-Memory SQL
+VoltDB;In-Memory SQL
+Greenplum;Massively Parallel Processing (MPP)
+SAP IQ;Columnar
+Presto;Query Engine
+TiDB;Distributed SQL
+Hazelcast;In-Memory Data Grid
+HP Vertica;Columnar
+Amazon Web Services (AWS);Cloud Provider
+Google Cloud Platform (GCP);Cloud Provider
+Microsoft Azure;Cloud Provider
+IBM Cloud;Cloud Provider
+DigitalOcean;Cloud Provider
+Oracle Cloud Infrastructure (OCI);Cloud Provider
+Alibaba Cloud;Cloud Provider
+Heroku;Platform as a Service (PaaS)
+Firebase;Mobile and Web Application Development Platform
+Netlify;Static Site Hosting and Deployment
+Vercel;Serverless Functions and Jamstack Deployment
+Microsoft Azure App Service;Platform as a Service (PaaS)
+Amazon Elastic Beanstalk;Platform as a Service (PaaS)
+Google App Engine;Platform as a Service (PaaS)
+Kubernetes;Container Orchestration Platform
+Docker;Containerization Platform
+Amazon S3;Cloud Storage
+Google Cloud Storage;Cloud Storage
+Microsoft Azure Blob Storage;Cloud Storage
+IBM Cloud Object Storage;Cloud Storage
+Dropbox;File Hosting and Sharing
+Box;Enterprise Cloud Content Management
+Google Drive;File Hosting and Sharing
+OneDrive;File Hosting and Sharing
+Amazon EC2;Virtual Servers in the Cloud
+Google Compute Engine;Virtual Machines in the Cloud
+Microsoft Azure Virtual Machines;Virtual Machines in the Cloud
+IBM Cloud Virtual Servers;Virtual Servers in the Cloud
+DigitalOcean Droplets;Virtual Machines in the Cloud
+Lambda (AWS);Serverless Compute Service
+Google Cloud Functions;Serverless Compute Service
+Microsoft Azure Functions;Serverless Compute Service
+IBM Cloud Functions;Serverless Compute Service
+Amazon RDS;Managed Relational Database Service
+Google Cloud SQL;Managed Relational Database Service
+Microsoft Azure SQL Database;Managed Relational Database Service
+IBM Db2 on Cloud;Managed Relational Database Service
+Amazon DynamoDB;Managed NoSQL Database Service
+Google Cloud Firestore;Managed NoSQL Database Service
+Microsoft Azure Cosmos DB;Managed NoSQL Database Service
+IBM Cloudant;Managed NoSQL Database Service
+Amazon Redshift;Cloud Data Warehouse
+Google BigQuery;Cloud Data Warehouse
+Microsoft Azure Synapse Analytics;Cloud Data Warehouse
+IBM Db2 Warehouse;Cloud Data Warehouse
+Amazon CloudFront;Content Delivery Network (CDN)
+Google Cloud CDN;Content Delivery Network (CDN)
+Microsoft Azure CDN;Content Delivery Network (CDN)
+IBM Cloud Content Delivery Network;Content Delivery Network (CDN)
+Cloudflare;Content Delivery Network (CDN)
+Amazon Route 53;Domain Name System (DNS) Service
+Google Cloud DNS;Domain Name System (DNS) Service
+Microsoft Azure DNS;Domain Name System (DNS) Service
+IBM Cloud Internet Services;Domain Name System (DNS) Service
+Tableau;data_visualization
+Power BI;data_visualization
+QlikView;data_visualization
+Metabase;data_visualization
+Looker;data_visualization
+Grafana;data_visualization
+Visual Studio;IDE
+Eclipse;IDE
+IntelliJ IDEA;IDE
+NetBeans;IDE
+PyCharm;IDE
+Xcode;IDE
+Android Studio;IDE
+Atom;IDE
+Sublime Text;IDE
+Visual Studio Code;IDE
+PyDev;IDE
+CLion;IDE
+WebStorm;IDE
+Code::Blocks;IDE
+RubyMine;IDE
+Qt Creator;IDE
+Rider;IDE
+Komodo IDE;IDE
+Notepad++;IDE
+Vim;IDE
+Emacs;IDE
+Brackets;IDE
+CodeLite;IDE
+Jupyter Notebook;IDE
+Zend Studio;IDE
+BlueJ;IDE
+Delphi;IDE
+Dev-C++;IDE
+Arduino IDE;IDE
+RStudio;IDE
+IntelliJ IDEA;IDE
+Spyder;IDE
+Anjuta;IDE
+CodeWarrior;IDE
+CodeLite;IDE
