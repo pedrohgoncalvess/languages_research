@@ -19,13 +19,30 @@ class infos_operations {
 
     val insertLanguage = Infos_tables.programmingLanguageTable += language
     val futureId: Future[Int] = connection.db.run(insertLanguage)
-    futureId.flatMap { q =>
-      println(s"New question has been added.")
+    futureId.flatMap { _ =>
+      println(s"New programming language has been added.")
       Future.successful(())
     }.recoverWith {
       case ex: Throwable if numTries > 1 =>
         println(s"Query failed, reason: $ex")
         insertProgrammingLanguage(language, numTries - 1)
+      case ex: Throwable =>
+        println(s"Query failed after $numTries tries, reason: $ex")
+        Future.failed(ex)
+    }
+  }
+
+  def insertTecnologie(tecnologie: Tecnologies, numTries: Int = 3): Future[Unit] = {
+
+    val insertNewTecnologie = Infos_tables.tecnologiesTable += tecnologie
+    val futureId: Future[Int] = connection.db.run(insertNewTecnologie)
+    futureId.flatMap { _ =>
+      println(s"New programming language has been added.")
+      Future.successful(())
+    }.recoverWith {
+      case ex: Throwable if numTries > 1 =>
+        println(s"Query failed, reason: $ex")
+        insertTecnologie(tecnologie, numTries - 1)
       case ex: Throwable =>
         println(s"Query failed after $numTries tries, reason: $ex")
         Future.failed(ex)
