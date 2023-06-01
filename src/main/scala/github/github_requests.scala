@@ -10,8 +10,8 @@ import java.time.format.DateTimeFormatter
 import scala.collection.mutable._
 
 object github_requests extends App {
-  //getUrlRepositories(since=maxIDRepositorie.getOrElse(None).toString)
-  getLimitRate
+  getUrlRepositories(since=maxIDRepositorie.getOrElse(None).toString)
+  //getLimitRate
 
   def getLimitRate: Unit = {
 
