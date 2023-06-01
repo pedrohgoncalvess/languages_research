@@ -1,12 +1,11 @@
 package stackoverflow
 
-import database.{Questions, QuestionsTags}
 import ujson._
 import upickle.core.LinkedHashMap
-
 import java.time.{Instant, LocalDate, LocalDateTime, ZoneId}
 import scala.collection.mutable.ArrayBuffer
-import database.operations.{insertQuestion, insertTagQuestion}
+import database.stackoverflow_schema.stackoverflowOperations._
+import database.stackoverflow_schema._
 
 
 object so_requests extends App {
