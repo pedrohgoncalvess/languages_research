@@ -8,7 +8,7 @@ import database.stackoverflow_schema.stackoverflowOperations._
 import database.stackoverflow_schema._
 
 
-object so_requests extends App {
+object so_requests {
   getInfos(requestQuestions)
 
   def requestQuestions: ArrayBuffer[LinkedHashMap[String, Value]] = {
@@ -35,20 +35,20 @@ object so_requests extends App {
       val score = answer.getOrElse("score",None).toString.toInt
       val isAnswered = answer.getOrElse("is_answered",None).toString.toBoolean
 
-      val _creationDateFormat = Instant.ofEpochSecond(creationDate)
-      val creationDateFormated = LocalDate.ofInstant(_creationDateFormat, ZoneId.systemDefault())
-      val _lastActivityDateFormat = Instant.ofEpochSecond(lastActivityDate)
-      val lastActivityDateFormated = LocalDate.ofInstant(_lastActivityDateFormat, ZoneId.systemDefault())
+      //val _creationDateFormat = Instant.ofEpochSecond(creationDate)
+      //val creationDateFormated = LocalDate.ofInstant(_creationDateFormat, ZoneId.systemDefault())
+      //val _lastActivityDateFormat = Instant.ofEpochSecond(lastActivityDate)
+      //val lastActivityDateFormated = LocalDate.ofInstant(_lastActivityDateFormat, ZoneId.systemDefault())
 
-      val newQuestion = Questions(id_question=creationId,
-        title=title,
-        view_count=viewCount,
-        answer_count=answerCount,
-        score=score,
-        is_answered=isAnswered,
-        creation_date=creationDateFormated,
-        last_activity = lastActivityDateFormated)
-      insertQuestion(newQuestion)
+//      val newQuestion = Questions(id_question=creationId,
+//        title=title,
+//        view_count=viewCount,
+//        answer_count=answerCount,
+//        score=score,
+//        is_answered=isAnswered,
+//        creation_date=creationDateFormated,
+//        last_activity = lastActivityDateFormated)
+//      insertQuestion(newQuestion)
 
       val jsonTags = answer.get("tags")
       jsonTags.map(tags => {

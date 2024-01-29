@@ -1,0 +1,6 @@
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] IncrementalCompile -----------[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
+[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 62 products, 13 sources, 8 libraries[0m
+[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/database/github_schema/github_operations.scala, ${BASE}/src/main/scala/database/stackoverflow_schema/stackoverflow_models.scala, ${BASE}/src/main/scala/database/infos_schema/infos_operations.scala, ${BASE}/src/main/scala/database/migration.scala, ${BASE}/src/main/scala/database/connection.scala, ${BASE}/src/main/scala/github/github_requests.scala, ${BASE}/src/main/scala/stackoverflow/so_requests.scala, ${BASE}/src/main/scala/database/github_schema/github_models.scala, ${BASE}/src/main/scala/stackoverflow/so_params.scala, ${BASE}/src/main/scala/database/stackoverflow_schema/stackoverflow_operations.scala, ${BASE}/src/main/scala/logs/database_logs.scala, ${BASE}/src/main/scala/github/github_params.scala, ${BASE}/src/main/scala/database/infos_schema/infos_models.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())[0m
+[0m[[0m[0mdebug[0m] [0m[0mNo changes[0m
