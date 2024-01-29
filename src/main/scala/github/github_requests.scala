@@ -3,14 +3,16 @@ package github
 import database.github_schema.githubOperations._
 import database.github_schema._
 import ujson.{Value, validate}
-
+import database.Migration.runMigrations
 import scala.collection.mutable.ArrayBuffer
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import scala.collection.mutable._
 
 object github_requests extends App {
-  getUrlRepositories(since=maxIDRepositorie.getOrElse(None).toString)
+  runMigrations() //function to run migrations
+
+  getUrlRepositories(since=maxIDRepositorie.getOrElse("0").toString)
   //getLimitRate
 
   def getLimitRate: Unit = {
