@@ -11,7 +11,7 @@ libraryDependencies ++= Seq(
   "com.lihaoyi" %% "requests" % "0.8.0", //REQUESTS
   "com.typesafe.slick" %% "slick" % "3.3.3", //FRM
   "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3", //FRM
-  "mysql" % "mysql-connector-java" % "8.0.27", //MYSQL DRIVER
+  "org.postgresql" % "postgresql" % "42.3.4", //POSTGRESQL DRIVER
   "org.flywaydb" % "flyway-core" % "7.14.0", //MIGRATIONS
   "ch.qos.logback" % "logback-classic" % "1.2.3", //LOGBACK
   "com.lihaoyi" %% "ujson" % "3.1.0", //READ RESPONSE OF REQUESTS
