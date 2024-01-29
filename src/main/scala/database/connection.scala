@@ -1,9 +1,9 @@
 package database
 
-import slick.jdbc.MySQLProfile.api._
+import slick.jdbc.PostgresProfile.api._
 
 object connection {
 
-  val db = Database.forConfig("mydb")
+  val db = Database.forConfig("postgres")
 
 }

@@ -1,23 +1,25 @@
 package database
 
-
-
-
-
-object DatabaseMigration{
+object DatabaseMigration {
   import org.flywaydb.core.Flyway
   import com.typesafe.config.ConfigFactory
 
   private val config = ConfigFactory.load()
-  private val user = config.getString("LOGIN_DATABASE")
-  private val password = config.getString("PASSWORD_DATABASE")
+  private val dbProperties = config.getConfig("postgres").getConfig("properties")
+  private val user = dbProperties.getString("user")
+  private val password = dbProperties.getString("password")
+  private val host = dbProperties.getString("serverName")
+  private val port = dbProperties.getInt("portNumber")
+  private val dbName = dbProperties.getString("databaseName")
 
-  val flyway = Flyway.configure.dataSource("jdbc:mysql://localhost:3306/languages_search", "root", "fodao002").load()
+  val flyway = Flyway.configure.dataSource(s"jdbc:postgresql://$host:$port/$dbName", user, password).load()
 }
 
-object Migration extends App {
+object Migration{
 
-  import DatabaseMigration.flyway
+  def runMigrations(): Unit = {
+    import DatabaseMigration.flyway
+    flyway.migrate()
+  }
 
-  flyway.migrate()
 }

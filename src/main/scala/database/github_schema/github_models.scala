@@ -28,7 +28,7 @@ case class LanguagesRepositories(
 
 object githubTables {
 
-  import slick.jdbc.MySQLProfile.api._
+  import slick.jdbc.PostgresProfile.api._
   import java.time.LocalDate
 
   class RepositoriesTable(tag: Tag) extends Table[Repositories](tag, Some("github"), "repositories") {

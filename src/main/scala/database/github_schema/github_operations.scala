@@ -11,7 +11,7 @@ object PrivateExecutionContext {
 
 object githubOperations {
 
-  import slick.jdbc.MySQLProfile.api._
+  import slick.jdbc.PostgresProfile.api._
   import PrivateExecutionContext._
   import database.connection
 
@@ -19,8 +19,7 @@ object githubOperations {
 
     val insertRepo = githubTables.repositoriesTable += repositorie
     val futureId: Future[Int] = connection.db.run(insertRepo)
-    futureId.flatMap { repo =>
-      println(s"New repo has been added.")
+    futureId.flatMap { _ =>
       Future.successful(())
     }.recoverWith {
       case ex: Throwable if numTries > 1 =>
@@ -37,7 +36,6 @@ object githubOperations {
     val insertNewTag = githubTables.tagsTable += tag_name
     val futureId: Future[Int] = connection.db.run(insertNewTag)
     futureId.flatMap { _ =>
-      println(s"New tag has been added.")
       Future.successful(())
     }.recoverWith {
       case ex: Throwable if numTries > 1 =>
@@ -54,7 +52,6 @@ object githubOperations {
     val insertNewLanguage = githubTables.languagesTable += language
     val futureId: Future[Int] = connection.db.run(insertNewLanguage)
     futureId.flatMap { _ =>
-      println(s"New language has been added.")
       Future.successful(())
     }.recoverWith {
       case ex: Throwable if numTries > 1 =>
